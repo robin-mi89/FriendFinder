@@ -1,0 +1,30 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "a website to find and match friends",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robin-mi89/FriendFinder.git"
+  },
+  "keywords": [
+    "friend",
+    "finder",
+    "express"
+  ],
+  "author": "Robin Mi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robin-mi89/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/robin-mi89/FriendFinder#readme"
+}
