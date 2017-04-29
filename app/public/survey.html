@@ -17,7 +17,7 @@
             <h3>Name (required)</h3>
             <input name="" id="name" class="form-control" required="" type="text">
             <h3>Link to photo (required)</h3>
-            <input name="" id="name" class="form-control" required="" type="text">
+            <input name="" id="photo" class="form-control" required="" type="text">
             <hr>
             <h2>Question 1</h2>
             <h4>You find the number 1 to be awesome</h4>
@@ -145,7 +145,7 @@
                 </div>
                 <div class="modal-body">
                     <h2 id="matchName"></h2>
-                    <img id="matchImg" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg" alt="">
+                    <img id="matchImg" src="" alt="">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -188,15 +188,14 @@
                     photo: $("#photo").val(),
                     scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
                 }
-
-
-                // Grab the URL of the website
+                //grab current url.
                 var currentURL = window.location.origin;
 
                 // AJAX post the data to the friends API. 
                 $.post(currentURL + "/api/friends", userData, function(data){
 
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    console.log(data);
                     $("#matchName").text(data.name);
                     $('#matchImg').attr("src", data.photo);
 
