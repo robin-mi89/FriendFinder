@@ -1,0 +1,2 @@
+# you don't want to check in your dependency files to git
+node_modules

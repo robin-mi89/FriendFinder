@@ -1,4 +1,5 @@
-var path = require("path");
+// you aren't actually using the path module in this file so there's no need to require it
+// var path = require('path');
 var friends = require("../data/friends.js");
     // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
     // A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to handle the compatibility logic.
@@ -18,6 +19,7 @@ module.exports = function(app)
         friends.friends.forEach(function(currentFriend)
         {
             var friendScore = 0;
+            // I'd suggest also using `.forEach` to loop through the new friend's scores for the sake of consistency
             for (i = 0; i < newFriend.scores.length; i++) //loops through all the scores of a friend. 
             {
                 friendScore += Math.abs(newFriend.scores[i] - currentFriend.scores[i]); //adds the absolute value of new friendscore - currently compared to friend's score. 
