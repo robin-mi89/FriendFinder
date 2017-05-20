@@ -182,7 +182,9 @@
             }
 
             // If all required fields are filled
-            if (validateForm() == true)
+            // Doesn't make a difference in this case, but I would still suggest using strict equality checking at all times 
+            // to avoid bugs caused by developers that don't know the difference between that and type coercion checking.
+            if (validateForm() === true)
             {
                 // Create an object for the user's data
                 var userData = {
@@ -191,6 +193,7 @@
                     scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
                 }
                 //grab current url.
+                // you don't actually need to do this since ajax calls will use the origin by default
                 var currentURL = window.location.origin;
 
                 // AJAX post the data to the friends API. 
